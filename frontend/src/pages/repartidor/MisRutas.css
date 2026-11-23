@@ -1,0 +1,27 @@
+
+.mis-rutas {
+  padding: 25px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.mis-rutas h1 {
+  margin-bottom: 25px;
+}
+
+.ruta-repartidor {
+  padding: 20px;
+  margin-bottom: 30px;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  background-color: #fff;
+}
+
+.ruta-repartidor h2 {
+  margin-bottom: 15px;
+}
+
+.ruta-repartidor h3 {
+  margin-top: 25px;
+  margin-bottom: 10px;
+}

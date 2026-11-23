@@ -1,0 +1,14 @@
+.mapa-ruta-contenedor {
+  width: 100%;
+  height: 400px;
+  margin-top: 20px;
+  overflow: hidden;
+  border-radius: 12px;
+  border: 1px solid #ddd;
+}
+
+.mapa-ruta-contenedor .leaflet-container {
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}

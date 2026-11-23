@@ -1,0 +1,227 @@
+
+/* CONTENEDOR DEL HISTORIAL */
+
+.mis-pedidos-contenido {
+  padding: 10px 0;
+}
+
+.mis-pedidos-contenido h1 {
+  color: #1e293b;
+  font-size: 26px;
+  margin-bottom: 25px;
+}
+
+/* LISTADO DE PEDIDOS */
+
+.mis-pedidos-listado {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+/* TARJETAS */
+
+.mis-pedido-card {
+  padding: 22px;
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(15, 23, 42, 0.04);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.mis-pedido-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.08);
+}
+
+.mis-pedido-card h3 {
+  color: #1e293b;
+  font-size: 18px;
+  margin: 0 0 16px;
+}
+
+.mis-pedido-card p {
+  color: #64748b;
+  font-size: 14px;
+  margin-bottom: 12px;
+}
+
+.mis-pedido-card p:last-of-type {
+  color: #1e293b;
+  font-size: 17px;
+  font-weight: 700;
+}
+
+/* ETIQUETAS DE ESTADO */
+
+.mis-pedido-card .estado-pedido {
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+/* BOTÓN DE SEGUIMIENTO */
+
+.mis-pedido-card .boton-seguimiento {
+  margin-top: 10px;
+  padding: 9px 15px;
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.mis-pedido-card .boton-seguimiento:hover {
+  background-color: #1d4ed8;
+}
+
+/* PANEL DE SEGUIMIENTO */
+
+.mis-pedido-card .seguimiento-pedido {
+  margin-top: 18px;
+  padding: 15px;
+  background-color: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+}
+
+.mis-pedido-card .seguimiento-pedido h4 {
+  margin: 0 0 15px;
+  color: #1e293b;
+  font-size: 15px;
+}
+
+.mis-pedido-card .seguimiento-pedido ol {
+  margin: 0;
+  padding-left: 22px;
+}
+
+.mis-pedido-card .seguimiento-pedido li {
+  padding: 7px 0;
+  font-size: 13px;
+}
+
+.mis-pedido-card .etapa-completada {
+  color: #15803d;
+}
+
+.mis-pedido-card .etapa-pendiente {
+  color: #94a3b8;
+}
+
+/* BARRA DE PROGRESO */
+
+.mis-pedido-card .seguimiento-progreso {
+  margin-bottom: 18px;
+}
+
+.mis-pedido-card .seguimiento-progreso-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 9px;
+  font-size: 13px;
+  color: #334155;
+}
+
+.mis-pedido-card .seguimiento-progreso-info span {
+  color: #64748b;
+  font-weight: 600;
+}
+
+.mis-pedido-card .seguimiento-barra {
+  width: 100%;
+  height: 9px;
+  background-color: #e2e8f0;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.mis-pedido-card .seguimiento-barra-avance {
+  height: 100%;
+  background-color: #2563eb;
+  border-radius: 20px;
+  transition: width 0.4s ease;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 768px) {
+  .mis-pedidos-listado {
+    grid-template-columns: 1fr;
+  }
+
+  .mis-pedido-card {
+    padding: 18px;
+  }
+}
+
+/* PANEL DE DETALLE DEL PEDIDO */
+
+.mis-pedido-card .detalle-pedido {
+  margin-top: 18px;
+  padding: 15px;
+  background-color: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+}
+
+.mis-pedido-card .detalle-pedido h4 {
+  margin: 0 0 15px;
+  color: #1e293b;
+  font-size: 15px;
+}
+
+/* LISTADO DE PRODUCTOS */
+
+.detalle-pedido-lista {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.detalle-pedido-producto {
+  padding: 13px;
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 7px;
+}
+
+.detalle-pedido-producto h5 {
+  margin: 0 0 10px;
+  color: #1e293b;
+  font-size: 14px;
+}
+
+.mis-pedido-card .detalle-pedido-producto p {
+  margin: 6px 0;
+  color: #64748b;
+  font-size: 13px;
+}
+
+.mis-pedido-card .detalle-pedido-producto p:last-child {
+  margin-top: 10px;
+  padding-top: 9px;
+  border-top: 1px solid #e2e8f0;
+  color: #1e293b;
+  font-size: 14px;
+  font-weight: 700;
+}
+.seguimiento-mapa {
+  margin-top: 25px;
+  padding-top: 20px;
+  border-top: 1px solid #ddd;
+}
+
+.seguimiento-mapa h4 {
+  margin-bottom: 15px;
+}

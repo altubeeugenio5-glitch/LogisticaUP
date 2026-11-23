@@ -1,0 +1,42 @@
+
+# Credenciales y variables de entorno
+.env
+.env.*
+!.env.example
+**/.env
+**/.env.*
+!**/.env.example
+
+# Configuración local de Spring
+**/application.properties
+**/application-local.properties
+
+# Java / Maven
+**/target/
+**/build/
+**/*.class
+**/*.jar
+**/*.war
+
+# IntelliJ / IDE
+.idea/
+*.iml
+.vscode/
+
+# React / Node
+**/node_modules/
+**/dist/
+**/.vite/
+
+# Python
+**/.venv/
+**/venv/
+**/__pycache__/
+**/*.py[cod]
+**/.pytest_cache/
+
+# Logs y sistema operativo
+*.log
+.DS_Store
+Thumbs.db
+desktop.ini
