@@ -9,5 +9,4 @@ class LogisticaApplicationTests {
 	@Test
 	void contextLoads() {
 	}
-
 }

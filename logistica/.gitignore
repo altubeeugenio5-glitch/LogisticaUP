@@ -31,3 +31,41 @@ build/
 
 ### VS Code ###
 .vscode/
+.env
+
+
+# Archivos sensibles
+.env
+.env.*
+!.env.example
+**/.env
+**/.env.*
+!**/.env.example
+
+# Configuración local de Spring
+**/application.properties
+**/application-local.properties
+
+# Java
+**/target/
+**/*.class
+**/*.jar
+**/*.war
+
+# Frontend
+**/node_modules/
+**/dist/
+**/.vite/
+
+# Python
+**/.venv/
+**/venv/
+**/__pycache__/
+**/*.py[cod]
+**/.pytest_cache/
+
+# Logs y archivos del sistema
+*.log
+.DS_Store
+Thumbs.db
+desktop.ini
