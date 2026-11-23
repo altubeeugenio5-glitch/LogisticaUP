@@ -23,14 +23,14 @@ public class OptimizacionResultConsumer {
         this.objectMapper = objectMapper;
         this.rutaService = rutaService;
     }
-
-    @RabbitListener(queues = RabbitMQConfig.COLA_RESULTADOS)
+    @RabbitListener 
+    (queues = RabbitMQConfig.COLA_RESULTADOS)
     public void recibirResultado(byte[] mensaje) {
 
         try {
             String json = new String(
                     mensaje,
-                    StandardCharsets.UTF_8
+                   StandardCharsets.UTF_8
             );
 
             ResultadoOptimizacionDTO resultado =

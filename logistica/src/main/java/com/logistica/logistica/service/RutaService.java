@@ -42,10 +42,13 @@ import java.util.List;
 import java.util.stream.Collectors;
 import java.util.Map;
 import java.util.Set;
+import jakarta.persistence.EntityManager;
+import jakarta.persistence.PersistenceContext;
 
 @Service
 public class RutaService {
-
+        @PersistenceContext
+        private EntityManager entityManager;
     private final RutaRepository rutaRepository;
     private final RepartidorRepository repartidorRepository;
     private final PedidoRepository pedidoRepository;  
@@ -823,13 +826,29 @@ public class RutaService {
                 );
         }
 
-        // Aplicar el nuevo orden
+        // Crear un mapa para localizar cada parada por su ID
         Map<Long, ParadaRuta> paradasPorId = paradas.stream()
                 .collect(Collectors.toMap(
                         ParadaRuta::getId,
                         parada -> parada
                 ));
 
+        // Calcular un rango temporal que no colisione con los órdenes actuales
+        int ordenTemporal = paradas.stream()
+                .mapToInt(ParadaRuta::getOrden)
+                .max()
+                .orElse(0) + 1;
+
+        // Primera etapa: asignar órdenes temporales únicos
+        for (int i = 0; i < idsOrdenados.size(); i++) {
+                ParadaRuta parada = paradasPorId.get(idsOrdenados.get(i));
+                parada.setOrden(ordenTemporal + i);
+        }
+
+        // Guardar los órdenes temporales antes de asignar los definitivos
+        entityManager.flush();
+
+        // Segunda etapa: asignar el orden definitivo
         for (int i = 0; i < idsOrdenados.size(); i++) {
                 ParadaRuta parada = paradasPorId.get(idsOrdenados.get(i));
                 parada.setOrden(i + 1);
